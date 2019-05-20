@@ -1,6 +1,6 @@
 package com.xzh.userapi.service;
 
-import com.xzh.userapi.messge.ResponseMessage;
+import com.xzh.common.message.ResponseMessage;
 import com.xzh.userapi.vo.UserVO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 public interface UserService {
 
-    @ApiOperation(value = "我啊")
+    @ApiOperation(value = "查找用户")
     @GetMapping("/findUser")
     ResponseMessage<UserVO> findUser(Long userId);
 }

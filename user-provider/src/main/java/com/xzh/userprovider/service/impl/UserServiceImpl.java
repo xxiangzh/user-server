@@ -1,6 +1,6 @@
 package com.xzh.userprovider.service.impl;
 
-import com.xzh.userapi.messge.ResponseMessage;
+import com.xzh.common.message.ResponseMessage;
 import com.xzh.userapi.service.UserService;
 import com.xzh.userapi.vo.UserVO;
 import com.xzh.userprovider.mapper.UserMapper;
