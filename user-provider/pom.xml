@@ -73,5 +73,11 @@
             <artifactId>user-api</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!--message-api-->
+        <dependency>
+            <groupId>com.xzh</groupId>
+            <artifactId>message-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 </project>
