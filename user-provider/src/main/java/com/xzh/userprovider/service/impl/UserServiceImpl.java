@@ -1,6 +1,7 @@
 package com.xzh.userprovider.service.impl;
 
 import com.xzh.common.message.ResponseMessage;
+import com.xzh.messageapi.enums.SendType;
 import com.xzh.messageapi.request.Notify;
 import com.xzh.userapi.service.UserService;
 import com.xzh.userapi.vo.UserVO;
@@ -28,7 +29,7 @@ public class UserServiceImpl implements UserService {
     public ResponseMessage<UserVO> findUser(Long userId) {
         User user = userMapper.selectByPrimaryKey(userId);
         UserVO vo = new UserVO(user.getName(),user.getPassword());
-        ResponseMessage send = senderClient.send(new Notify("xiangzhenhua@mmtvip.com", "bb", "nn"));
+        ResponseMessage send = senderClient.send(new Notify(SendType.MAIL,"xiangzhenhua@mmtvip.com", "bb", "nn"));
         return new ResponseMessage<>(send.getCode(),send.getMessage(),vo);
     }
 }
